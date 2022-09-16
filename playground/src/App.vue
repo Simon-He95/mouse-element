@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { createElement } from '../../src/component'
-function clickHandler(e: MouseEvent) {
-  createElement(e)
-}
+import { createElement } from '../../src/createElement'
 </script>
 
 <template>
@@ -10,7 +7,7 @@ function clickHandler(e: MouseEvent) {
     font-sans
     p="x-4 y-10"
     text="center gray-700 dark:gray-200"
-    @mousemove="clickHandler"
+    @mousemove="createElement"
   >
     <my-component />
     <router-view />

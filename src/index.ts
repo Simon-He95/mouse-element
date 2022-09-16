@@ -1,2 +1,2 @@
-export { component } from './component'
+export { createElement } from './createElement'
 export * from './types'
