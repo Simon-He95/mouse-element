@@ -1,6 +1,6 @@
 {
   "name": "mouse-element",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "packageManager": "pnpm@6.32.3",
   "description": "mouse-element",
   "author": "Simon He",
