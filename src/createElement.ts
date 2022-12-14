@@ -1,4 +1,4 @@
-import { addStyle, throttle } from 'simon-js-tool'
+import { addStyle, throttle } from 'lazy-js-utils'
 
 const style = `
 .cbutton{

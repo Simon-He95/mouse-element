@@ -10,4 +10,4 @@
 [issues](https://github.com/Simon-He95/zsh-install/issues)
 
 ## 依赖
-- [simon-js-tool](https://github.com/Simon-He95/simon-js-tool)
+- [lazy-js-utils](https://github.com/Simon-He95/lazy-js-utils)

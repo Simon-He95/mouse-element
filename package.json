@@ -34,8 +34,8 @@
     "dev": "pkgroll --watch",
     "play": "pnpm run -C playground dev",
     "play:build": "pnpm run -C playground build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --cache",
+    "lint:fix": "eslint . --cache --fix",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest --dir test -u",
     "ptest": "pnpm run -C playground test -u",
@@ -46,6 +46,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^8.1.1",
+    "lazy-js-utils": "^0.0.5",
     "vue": "^3.2.36"
   },
   "devDependencies": {
@@ -56,7 +57,6 @@
     "eslint": "^8.16.0",
     "eslint-plugin-n": "^15.2.1",
     "pkgroll": "^1.3.1",
-    "simon-js-tool": "^4.0.39",
     "typescript": "^4.7.2",
     "vite": "^3.0.2",
     "vitest": "^0.13.1"
