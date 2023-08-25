@@ -1,2 +1,2 @@
-export { createElement } from './createElement'
+export { createMouseAnimation } from './createMouseAnimation'
 export * from './types'

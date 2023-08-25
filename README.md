@@ -1,9 +1,19 @@
 ## mouse-element
 提供一个简单的鼠标小动画
 
+## 🔨 Install
+```
+## 安装依赖
+npm install mouse-element
+
+## 导入组件
+import { createMouseAnimation } from 'createMouseAnimation'
+
+```
+
 ## 🌈 Usage
 ```vue
-<main w-full h-full @mousemove="e => createElement(e, { backgroundColor: 'yellow', timeout: 1000 })">
+<main w-full h-full @mousemove="e => createMouseAnimation(e, { backgroundColor: 'yellow', timeout: 1000 })">
 </main>
 ```
 
