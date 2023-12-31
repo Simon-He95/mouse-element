@@ -3,4 +3,5 @@ export interface Options {
   width?: string
   height?: string
   backgroundColor?: string
+  mode?: 'screen' | 'page' | 'client' | 'offset'
 }

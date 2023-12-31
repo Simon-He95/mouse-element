@@ -26,11 +26,21 @@ const generateStyle = (backgroundColor: string, width: string, height: string) =
 
 function createTarget(e: MouseEvent, options?: Options) {
   try {
-    const { timeout = 1000, backgroundColor = '#bbb', width = '100px', height = '100px' } = options || {}
+    const { timeout = 1000, backgroundColor = '#bbb', width = '100px', height = '100px', mode = 'page' } = options || {}
     addStyle(generateStyle(backgroundColor, width, height))
     const element = document.createElement('div')
-    element.style.left = `${e.clientX}px`
-    element.style.top = `${e.clientY}px`
+
+    const { clientX, clientY, offsetX, offsetY, pageX, pageY, screenX, screenY } = e
+    const pByMode = {
+      page: [pageX, pageY],
+      client: [clientX, clientY],
+      offset: [offsetX, offsetY],
+      screen: [screenX, screenY],
+    }
+    const [x, y] = pByMode[mode]
+
+    element.style.left = `${x}px`
+    element.style.top = `${y}px`
     element.style.transition = `all ${timeout}ms ease-in-out`
     element.setAttribute('class', 'mouse-animation')
     document.body.appendChild(element)
