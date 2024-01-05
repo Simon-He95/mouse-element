@@ -1,11 +1,11 @@
 import { addStyle, removeElement, throttle, useRaf } from 'lazy-js-utils'
 import type { Options } from './types'
 
-const generateStyle = (backgroundColor: string, width: string, height: string) => `
+const generateStyle = (background: string, width: string, height: string) => `
 .mouse-animation{
   position: absolute;
   transform: translate(-50%,-50%);
-  background-color: ${backgroundColor};
+  background: ${background};
   border-radius: 50%;
   animation: big 1s;
   pointer-events: none;
@@ -26,8 +26,8 @@ const generateStyle = (backgroundColor: string, width: string, height: string) =
 
 function createTarget(e: MouseEvent, options?: Options) {
   try {
-    const { timeout = 1000, backgroundColor = '#bbb', width = '100px', height = '100px', mode = 'page' } = options || {}
-    addStyle(generateStyle(backgroundColor, width, height))
+    const { timeout = 1000, background = '#bbb', width = '100px', height = '100px', mode = 'page' } = options || {}
+    addStyle(generateStyle(background, width, height))
     const element = document.createElement('div')
 
     const { clientX, clientY, offsetX, offsetY, pageX, pageY, screenX, screenY } = e
